@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Showroom</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">Waton Moter Showroom</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#cars">Cars</a></li>
+                <li><a href="#our-services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+   
+    <!-- Home Section -->
+    <section id="home" class="home-section">
+        <div class="slider-container">
+            <!-- Slider Images -->
+            <div class="slider">
+                <div class="slide">
+                    <img src="img/car11.jpg" alt="Car 1">
+                    <div class="caption">
+                        <h2>SUV Model 2025</h2>
+                        <p>Luxury SUV with advanced features</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="img/car12.jpeg" alt="Car 2">
+                    <div class="caption">
+                        <h2>Sedan Model 2025</h2>
+                        <p>Comfort and style at its finest</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="img/car13.jpeg" alt="Car 3">
+                    <div class="caption">
+                        <h2>Electric Car 2025</h2>
+                        <p>Experience the future of driving</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slider Navigation -->
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <button class="next" onclick="nextSlide()">&#10095;</button>
+        </div>
+
+        <!-- Call-to-Action Button -->
+        <button class="cta-button" onclick="scrollToSection('about')">Learn More</button>
+    </section>
+
+     <!-- Our Cars Section -->
+     <section id="our-cars" class="cars-section">
+        <h2>Our Cars</h2>
+        <p>Select a category to filter the cars:</p>
+
+        <!-- Car Filter Buttons -->
+        <div class="filter-buttons">
+            <button onclick="filterCars('all')">All</button>
+            <button onclick="filterCars('suv')">SUV</button>
+            <button onclick="filterCars('sedan')">Sedan</button>
+            <button onclick="filterCars('electric')">Electric</button>
+        </div>
+
+        <!-- Cars List -->
+        <div class="car-list" id="car-list">
+            <div class="car-card suv">
+                <img src="img/car10.jpeg" alt="SUV 1">
+                <h3>Civic Model 1</h3>
+                <p>Price: $40,000</p>
+            </div>
+            <div class="car-card sedan">
+                <img src="img/car6.jpeg" alt="Sedan 1">
+                <h3>XLI Model 24</h3>
+                <p>Price: $35,000</p>
+            </div>
+            <div class="car-card electric">
+                <img src="img/car7.jpeg" alt="Electric 1">
+                <h3>Corolla Model 19</h3>
+                <p>Price: $50,000</p>
+            </div>
+            <div class="car-card suv">
+                <img src="img/car11.jpg" alt="SUV 2">
+                <h3>SUV Model 2</h3>
+                <p>Price: $42,000</p>
+            </div>
+            <div class="car-card sedan">
+                <img src="img/car12.jpeg" alt="Sedan 2">
+                <h3>Sedan Model 2</h3>
+                <p>Price: $37,000</p>
+            </div>
+            <div class="car-card electric">
+                <img src="img/car13.jpeg" alt="Electric 2">
+                <h3>Electric Model 2</h3>
+                <p>Price: $52,000</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cars Section -->
+    <section id="cars" class="cars-section">
+        <h2>Our Cars Available</h2>
+        <div class="car-list">
+            <div class="car-card">
+                <img src="img/car10.jpeg" alt="Car1">
+                <h3>Civic Model 1</h3>
+                <p>Price: $40,000</p>
+            </div>
+            <div class="car-card">
+                <img src="img/car6.jpeg" alt="Car2">
+                <h3>XLI Model 24</h3>
+                <p>Price: $80,000</p>
+            </div>
+            <div class="car-card">
+                <img src="img/car9.jpeg" alt="Car3">
+                <h3>Corolla Model 19</h3>
+                <p>Price: $30,000</p>
+            </div>
+            <div class="car-card">
+                <img src="img/car7.jpeg" alt="Car4">
+                <h3>Corolla Model 23</h3>
+                <p>Price: $50,000</p>
+            </div>
+            
+        </div>
+    </section>
+     <!-- Our Services Section -->
+     <section id="our-services" class="services-section">
+        <h2>Our Services</h2>
+        <p>We offer a variety of services to meet your needs.</p>
+
+        <div class="services-list">
+            <div class="service-card" onclick="showServiceDetails('Car Sales')">
+                <i class="service-icon">&#128663;</i>
+                <h3>Car Sales</h3>
+                <p>We provide a wide selection of cars from various brands at competitive prices.</p>
+                <button>Learn More</button>
+            </div>
+            <div class="service-card" onclick="showServiceDetails('Car Maintenance')">
+                <i class="service-icon">&#128295;</i>
+                <h3>Car Maintenance</h3>
+                <p>Our experts ensure your car stays in top condition with regular maintenance services.</p>
+                <button>Learn More</button>
+            </div>
+            <div class="service-card" onclick="showServiceDetails('Financing')">
+                <i class="service-icon">&#128181;</i>
+                <h3>Financing</h3>
+                <p>Get flexible financing options for the car of your dreams with our trusted partners.</p>
+                <button>Learn More</button>
+            </div>
+            <div class="service-card" onclick="showServiceDetails('Insurance')">
+                <i class="service-icon">&#128176;</i>
+                <h3>Insurance</h3>
+                <p>We offer comprehensive insurance options to protect your investment.</p>
+                <button>Learn More</button>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Submit</button>
+        </form>
+        <p id="form-success" class="hidden">Thank you for contacting us!</p>
+    </section>
+       <!-- Footer Section -->
+       <section id="Footer" class="Footer-section">
+       <footer class="footer-section">
+        <div class="footer-container">
+
+            <!-- Quick Links Column -->
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#our-services">Services</a></li>
+                    <li><a href="#cars">Our Cars</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Column -->
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p> Watan Moter Showroom City:Talangang, Pakistan</p>
+                <p>Phone: +92 3118530907</p>
+                <p>Email: asmatullahmalikasmatullah@gmail.com</p>
+            </div>
+
+            <!-- Social Media Column -->
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <div class="social-media-icons">
+                    <a href="https://www.facebook.com/profile.php?id=100072753678006&mibextid=ZbWKwL" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/obsessed.with.you_2.0?igsh=NGRncTM4Y3dvbnRn" target="_blank" aria-label="Twitter"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/feed.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.tiktok.com/@with_obsessed_me?_t=8pNYQDP11m5&_r=1" target="_blank" aria-label="GitHub"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Back to Top Button -->
+        <button id="backToTop" onclick="scrollToTop()">&#8679; Back to Top</button>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Asmat-Ullah Car Showroom. All Rights Reserved.</p>
+        </div>
+    </footer>
+</section>
+
+    <!-- JavaScript -->
+    <script src="javaScript.js"></script>
+</body>
+</html>
